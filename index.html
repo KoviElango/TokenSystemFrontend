@@ -3,111 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Restaurant Menu</title>
+    <title>Welcome to Foodcourt</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Left Tab for Vendors -->
-        <div class="left-tab">
-            <button class="tab-button" onclick="switchVendor('C1')">
-                <span class="material-icons large-icon">restaurant_menu</span> Vendor 1
-            </button>
-            <button class="tab-button" onclick="switchVendor('C2')">
-                <span class="material-icons large-icon">restaurant</span> Vendor 2
-            </button>
+    <div class="landing-container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="https://logowik.com/content/uploads/images/sky7818.jpg" alt="Sky Logo" class="logo">
         </div>
 
-        <!-- Middle Section for Food Items -->
-        <div class="menu-section">
-            <div id="C1" class="menu-category">
-                <div class="menu-item">
-                    <div class="item-details">
-                        <img src="https://via.placeholder.com/100" alt="Pizza">
-                        <div>
-                            <h4>Pizza Margherita</h4>
-                            <p>$7.00</p>
-                        </div>
-                    </div>
-                    <div class="item-controls">
-                        <button onclick="decreaseCount('Pizza', 7)">-</button>
-                        <span id="Pizza-count">0</span>
-                        <button onclick="increaseCount('Pizza', 7)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-details">
-                        <img src="https://via.placeholder.com/100" alt="Burger">
-                        <div>
-                            <h4>Burger</h4>
-                            <p>$5.00</p>
-                        </div>
-                    </div>
-                    <div class="item-controls">
-                        <button onclick="decreaseCount('Burger', 5)">-</button>
-                        <span id="Burger-count">0</span>
-                        <button onclick="increaseCount('Burger', 5)">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div id="C2" class="menu-category" style="display: none;">
-                <div class="menu-item">
-                    <div class="item-details">
-                        <img src="https://via.placeholder.com/100" alt="Sushi">
-                        <div>
-                            <h4>Sushi</h4>
-                            <p>$12.00</p>
-                        </div>
-                    </div>
-                    <div class="item-controls">
-                        <button onclick="decreaseCount('Sushi', 12)">-</button>
-                        <span id="Sushi-count">0</span>
-                        <button onclick="increaseCount('Sushi', 12)">+</button>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-details">
-                        <img src="https://via.placeholder.com/100" alt="Tempura">
-                        <div>
-                            <h4>Tempura</h4>
-                            <p>$8.00</p>
-                        </div>
-                    </div>
-                    <div class="item-controls">
-                        <button onclick="decreaseCount('Tempura', 8)">-</button>
-                        <span id="Tempura-count">0</span>
-                        <button onclick="increaseCount('Tempura', 8)">+</button>
-                    </div>
-                </div>
-            </div>
+        <!-- Banner Section -->
+        <div class="banner-section">
+            <img src="https://t3.ftcdn.net/jpg/05/99/03/36/360_F_599033685_5UYD8YOZgNnWwUEB9z7t0fkHDk0Cqd1e.jpg" alt="Food Banner" class="banner-image">
         </div>
 
-        <!-- Right Section for Cart -->
-        <div class="cart-section">
-            <h3>Cart</h3>
-            <div id="cart-items"></div>
-            <div id="cart-total">
-                <p>Total: $<span id="total-amount">0.00</span></p>
-            </div>
-            <button class="checkout-btn">Checkout</button>
+        <!-- Information Section -->
+        <div class="info-section">
+            <h1>Welcome to Foodcourt</h1>
+            <p>Best Foodcourt in town with a wide variety of vendors!</p>
+            <h3>Operating Hours</h3>
+            <p>Monday to Friday: 9 AM – 9 PM<br>
+               Saturday and Sunday: 10 AM – 8 PM</p>
+            <button class="order-btn" onclick="window.location.href='order.html'">Order Now</button>
         </div>
     </div>
-
-    <!-- Modal for vendor switch warning -->
-    <div id="vendorModal" class="modal">
-        <div class="modal-content">
-            <p>Switching vendors will clear your cart. Are you sure you want to switch?</p>
-            <button onclick="confirmVendorSwitch()">Yes</button>
-            <button onclick="closeModal()">No</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

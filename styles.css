@@ -44,10 +44,11 @@ body {
 }
 
 .large-icon {
-    font-size: 24px;
+    font-size: 30px; /* Make icons larger */
     margin-right: 10px;
-    color: #d32f2f;
+    color: #d32f2f; /* Red color for consistency */
 }
+
 
 .menu-section {
     width: 55%;
@@ -58,24 +59,11 @@ body {
     background-color: white;
     box-sizing: border-box;
     overflow-y: auto;
-    transition: all 0.3s ease;
-}
-
-.menu-category {
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-    transition: visibility 0.3s, height 0.3s ease-in-out;
-}
-
-.menu-category.active {
-    visibility: visible;
-    height: auto;
 }
 
 .menu-item {
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -125,6 +113,7 @@ body {
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
+    margin: 0 5px;
 }
 
 .item-controls span {
@@ -170,4 +159,124 @@ body {
 
 .checkout-btn:hover {
     background-color: #b71c1c;
+}
+
+/* Styles specific to the landing page */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Logo Section Styling */
+.logo-section {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+/* Banner Section Styling */
+.banner-section {
+    margin-bottom: 30px;
+}
+
+.banner-image {
+    width: 80%; /* Adjust the width as necessary */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Information Section Styling */
+.info-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.order-btn {
+    padding: 15px 30px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.order-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    background-color: #b71c1c;
+}
+
+.modal .checkout-btn {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }

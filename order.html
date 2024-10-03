@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food Order</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Vendor Selection -->
+        <div class="left-tab">
+            <button class="tab-button" onclick="switchVendor('C1')">
+                <span class="material-icons large-icon">restaurant_menu</span> Vendor 1
+            </button>
+            <button class="tab-button" onclick="switchVendor('C2')">
+                <span class="material-icons large-icon">restaurant_menu</span> Vendor 2
+            </button>
+        </div>
+    
+        <!-- Menu Section for Vendor 1 -->
+        <div id="C1" class="menu-section"></div>
+    
+        <!-- Menu Section for Vendor 2 -->
+        <div id="C2" class="menu-section" style="display: none;"></div>
+    
+        <!-- Cart Section -->
+        <div class="cart-section">
+            <h3>Cart</h3>
+            <div id="cart-items"></div>
+            <div id="cart-total">
+                <p>Total: $<span id="total-amount">0.00</span></p>
+            </div>
+            <button class="checkout-btn" onclick="proceedToPayment()">Checkout</button>
+        </div>
+    </div>
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <h3>Select Payment Method</h3>
+            <button class="checkout-btn" onclick="processPayment('Credit Card')">Credit Card</button>
+            <button class="checkout-btn" onclick="processPayment('PayPal')">PayPal</button>
+            <button class="checkout-btn" onclick="processPayment('Cash')">Cash</button>
+        </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div id="receiptModal" class="modal">
+        <div class="modal-content">
+            <h3>Order Receipt</h3>
+            <p>Thank you for your order!</p>
+            <div id="receipt-details"></div>
+            <button class="checkout-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
