@@ -22,7 +22,7 @@ let currentVendor = 'C1';
 // Function to generate the menu dynamically based on vendor
 function generateMenu(vendorItems, vendorId) {
     let menuSection = document.getElementById(vendorId);
-    menuSection.innerHTML = ''; // Clear previous content
+    menuSection.innerHTML = '';
 
     vendorItems.forEach(item => {
         menuSection.innerHTML += `
@@ -73,8 +73,8 @@ function displayVendor(vendor) {
 }
 
 function clearCart() {
-    cart = {}; // Reset the cart
-    updateCartDisplay(); // Update cart display to reflect cleared cart
+    cart = {};
+    updateCartDisplay();
 }
 
 // Increase the item count and add to cart
@@ -110,7 +110,7 @@ function addToCart(item, count, price) {
 function updateCartDisplay() {
     let cartItemsDiv = document.getElementById('cart-items');
     let totalAmount = 0;
-    cartItemsDiv.innerHTML = ''; // Clear previous cart items
+    cartItemsDiv.innerHTML = '';
 
     for (let item in cart) {
         let cartItem = cart[item];
